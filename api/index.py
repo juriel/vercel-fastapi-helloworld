@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from fastapi.staticfiles import StaticFiles
-
+import os
 app = FastAPI(
     title="Vercel + FastAPI",
     description="Vercel + FastAPI",
@@ -8,7 +8,9 @@ app = FastAPI(
 )
 
 
-
+@app.get("/pwd")
+async def pwd():
+    return {"message": os.getcwd()}
 
 @app.get("/api/hello")
 async def hello(name: str):
@@ -16,4 +18,4 @@ async def hello(name: str):
 # Mount the public directory at the root
 #app.mount("/", StaticFiles(directory="public", html=True), name="public")
 
-app.mount("/", StaticFiles(directory="public"), name="public")
+#app.mount("/", StaticFiles(directory="public"), name="public")
