@@ -15,3 +15,5 @@ async def hello(name: str):
     return {"message": f"Hello {name}"}
 # Mount the public directory at the root
 #app.mount("/", StaticFiles(directory="public", html=True), name="public")
+
+app.mount("/", StaticFiles(directory="public"), name="public")
