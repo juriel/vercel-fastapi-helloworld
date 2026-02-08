@@ -20,4 +20,4 @@ async def hello(name: str):
 # Mount the public directory at the root
 #app.mount("/", StaticFiles(directory="public", html=True), name="public")
 
-#app.mount("/", StaticFiles(directory="public"), name="public")
+app.mount("/", StaticFiles(directory="static"), name="static")
