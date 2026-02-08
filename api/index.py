@@ -10,7 +10,9 @@ app = FastAPI(
 
 @app.get("/pwd")
 async def pwd():
-    return {"message": os.getcwd()}
+    # list all files in the current directory
+    files = os.listdir(".")
+    return {"message": files, "pwd": os.getcwd()}
 
 @app.get("/api/hello")
 async def hello(name: str):
