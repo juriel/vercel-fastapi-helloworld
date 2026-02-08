@@ -71,4 +71,4 @@ def generate_folder_hierarchy(path):
 async def hello(name: str):
     return {"message": f"Hello {name}"}
 
-app.mount("/", StaticFiles(directory="static"), name="static",html=True)
+app.mount("/", StaticFiles(directory="static",html=True), name="static")
