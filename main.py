@@ -70,7 +70,5 @@ def generate_folder_hierarchy(path):
 @app.get("/api/hello")
 async def hello(name: str):
     return {"message": f"Hello {name}"}
-# Mount the public directory at the root
-#app.mount("/", StaticFiles(directory="public", html=True), name="public")
 
-app.mount("/", StaticFiles(directory="static"), name="static")
+app.mount("/", StaticFiles(directory="static"), name="static",html=True)
