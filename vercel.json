@@ -2,6 +2,5 @@
     "$schema": "https://openapi.vercel.sh/vercel.json",
     "framework": "fastapi",
     "installCommand": "pip install -r requirements.txt",
-    "rootDirectory": "backend",
-    "staticDirectory": "frontend"
+    "rootDirectory": "backend"
 }
