@@ -3,5 +3,5 @@
     "framework": "fastapi",
     "installCommand": "pip install -r requirements.txt",
     "rootDirectory": "backend",
-    "staticDirectory": "static"
+    "staticDirectory": "frontend"
 }
